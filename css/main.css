@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  .loading{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+body{
+    background-color:#272b30;
+    /* overflow: hidden; */
+    font-family: "Comfortaa", cursive;; 
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Nerko One", cursive;
+}
+.loading-screen{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 999;
+}
+header img{
+    height: 250px;
+    object-fit: cover;
+}
+/* navbar */
+nav .container{
+    background-color: rgb(58, 73, 123);
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 10px 0px;
+}
+.navbar-brand img{
+    width: 50px;
+}
+
+.nav-item .nav-link{
+    font-family: "Comfortaa", cursive !important;
+    color: white !important;
+}
+.nav-item .nav-link.active, .nav-item .nav-link:hover {
+    color: #09c !important;
+    transition: color 0.5s;
+}
+
+#gameRow .col-md-3 .card{
+    background-color:#272b30;
+    transition: 0.3s;
+}
+#gameRow .col-md-3 .card:hover{
+    transform: scale(1.1);
+}
+#gameRow button{
+    background-color: #1d3f5d;
+    transition: 0.5s;
+    color: white;
+}
+#gameRow .col-md-3:hover button{
+    background-color: rgb(13, 110, 253);
+}
+.card .card-body p{
+    color: #777A7D;
+}
+.card .card-footer .badge{
+    background-color: #32383e;
+}
+
